@@ -30,6 +30,9 @@ while not end_of_game:
     if guess in users_guessed_letters:
         print(f"\nYou have already guessed {guess}. Pick a different letter.")
 
+    elif guess == "":
+        print("You did not enter a letter . . . please enter a letter.\n")
+
     else:
         users_guessed_letters.append(guess)  # add letter to guessed letters
         for letterPosition in range(0,len(chosen_word)):  # running a loop to check if guess matches letter
@@ -38,7 +41,7 @@ while not end_of_game:
                 letter_added = True  # setting flag to true so a life is not taken
 
         if letter_added == False:  # if a correct letter was not guessed, inform user and remove a life
-            print(f"Oh man . . . {guess} is NOT in the word.")
+            print(f"\nOh man . . . {guess} is NOT in the word.")
             lives -= 1
 
         print(hangman_art.stages[lives])  # show the gallow and hanged man (if applicable)
