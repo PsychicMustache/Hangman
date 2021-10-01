@@ -1,2 +1,2 @@
 # Hangman
-Simple Hangman game using Python
+Simple Hangman game using Python; run using Hangman.py
